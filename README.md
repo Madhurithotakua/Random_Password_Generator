@@ -86,4 +86,6 @@ The output page includes:
 ![Screenshot 2024-09-02 224639](https://github.com/user-attachments/assets/6175ac8d-f40b-4c7d-8066-a16d3bc3b7f5)
 
 
-                                             *Happy password generating!*
+**Happy password generating!**
+
+                                       
