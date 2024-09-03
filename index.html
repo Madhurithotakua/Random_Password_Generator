@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Random Password Generator</h1>
+        
+        {% if message %}
+            <p style="color: red;">{{ message }}</p>
+        {% endif %}
+        
+        <form method="post" action="/">
+            <label for="level">Password Level:</label>
+            <select name="level" id="level">
+                <option value="easy" style="color: black;">Easy</option>
+<option value="medium" style="color: black;">Medium</option>
+<option value="hard" style="color: black;">Hard</option>
+
+            </select>
+
+            <label for="length">Number of Characters:</label>
+            <input type="number" name="length" id="length" min="8" value="12" required>
+
+            <label><input type="checkbox" name="uppercase" checked> Include Uppercase</label>
+            <label><input type="checkbox" name="lowercase" checked> Include Lowercase</label>
+            <label><input type="checkbox" name="digits" checked> Include Digits</label>
+            <label><input type="checkbox" name="special" checked> Include Special Characters</label>
+
+            <button type="submit">Generate Password</button>
+        </form>
+
+        {% if password %}
+        <div class="password-box">
+            <span id="generated-password">{{ password }}</span>
+            <span class="copy-icon" onclick="copyPassword()">&#x2398;</span> <!-- Clipboard copy icon -->
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        function copyPassword() {
+            var passwordText = document.getElementById("generated-password").textContent;
+            navigator.clipboard.writeText(passwordText).then(function() {
+                alert("Password copied to clipboard!");
+            }, function(err) {
+                console.error("Could not copy text: ", err);
+            });
+        }
+    </script>
+</body>
+</html>

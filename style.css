@@ -1,0 +1,142 @@
+/* Background styling for the entire page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #3498db); /* Dark blue to bright blue gradient */
+    color: #f3f3f3; /* Light grey text color for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Container for the form */
+.container {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    width: 450px; 
+    backdrop-filter: blur(8px); /* Blurs background for depth */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for contrast */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.03); /* Slight zoom effect on hover */
+}
+
+/* Heading styling */
+h1 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #ffffff; /* Pure white for clear visibility */
+    letter-spacing: 1.5px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #f3f3f3; /* Light grey text */
+}
+
+/* Input and Select styling */
+input[type="number"],
+select {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Slightly bolder border */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: #3498db; /* Bright blue border on focus */
+}
+
+/* Button styling */
+button {
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #3498db; /* Bright blue button */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 50%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center; /* Center the text inside the button */
+    margin-left: auto; /* Aligns the button to the center */
+    margin-right: auto; /* Aligns the button to the center */
+}
+
+button:hover {
+    background-color: #1e73b9; /* Slightly darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Password box styling */
+.password-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff; /* White text for visibility */
+    height: 50px; 
+    overflow-y: auto;
+    word-wrap: break-word;
+    position: relative; /* Allows positioning of the copy icon */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px; /* Adds space for the copy icon */
+}
+
+/* Copy icon styling */
+.copy-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-120%);
+    cursor: pointer;
+    font-size: 20px;
+    color: #ffffff; /* White color for the icon */
+    transition: color 0.3s ease;
+}
+
+.copy-icon:hover {
+    color: #3498db; /* Change color on hover */
+}
+
+/* Scrollbar styling for the password box */
+/* Scrollbar styling for the password box */
+.password-box::-webkit-scrollbar {
+    width: 20px; /* Narrower scrollbar width */
+    height: 2px; /* Narrower scrollbar height */
+}
+
+.password-box::-webkit-scrollbar-thumb {
+    background-color: #3498db; /* Bright blue scrollbar */
+    border-radius: 8px;
+}
+
