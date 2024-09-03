@@ -24,7 +24,7 @@ Follow these instructions to set up the Flask Password Generator on your local m
 1. **Clone the repository**:
 
     ```bash
-    git clone 
+    git clone https://github.com/Madhurithotakua/Random_Password_Generator
     cd Random_Password_Generator
     ```
 
@@ -86,4 +86,4 @@ The output page includes:
 ![Screenshot 2024-09-02 224639](https://github.com/user-attachments/assets/6175ac8d-f40b-4c7d-8066-a16d3bc3b7f5)
 
 
-
+                                             *Happy password generating!*
